@@ -12,7 +12,6 @@ gem "builder", "~> 3.0.0"
 # Add CSS Goodies
 gem "susy", "~> 1.0"
 gem "compass", "~> 0.12.2"
-gem "animate"
 gem "zurb-foundation", :github => 'zurb/foundation', :branch => 'master'
 
 # Add Markup Goodies
