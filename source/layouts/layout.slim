@@ -1,12 +1,11 @@
 doctype 5
 html
 	head
-		meta charset="utf-8"
-		meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' 
-	
+		== partial 'partials/header'
 	body
 		
 		#main role="main"
 			== yield
+		a href="#" class="button" Default Button
 		
 		== partial 'partials/aside'

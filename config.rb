@@ -48,7 +48,11 @@ activate :directory_indexes
 
 # Susy grids in Compass
 # First: gem install susy
-# require 'susy'
+require 'susy'
+require 'zurb-foundation'
+preferred_syntax = :sass
+
+require 'slim'
 
 # Change Compass configuration
 # compass_config do |config|
