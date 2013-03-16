@@ -12,3 +12,4 @@ gem "builder", "~> 3.0.0"
 gem "susy", "~> 1.0"
 gem "compass", "~> 0.12.2"
 gem "slim", "1.2"
+gem "zurb-foundation", :github => 'zurb/foundation', :branch => 'master'

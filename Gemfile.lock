@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/zurb/foundation.git
+  revision: 45be5e10862ac9588669fa462164ec80ee52f4ea
+  branch: master
+  specs:
+    zurb-foundation (4.0.8)
+      sass (>= 3.2.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -149,3 +157,4 @@ DEPENDENCIES
   middleman-sync (~> 3.0.9)
   slim (= 1.2)
   susy (~> 1.0)
+  zurb-foundation!
