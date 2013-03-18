@@ -1,11 +1,11 @@
 source :rubygems
 
 # Add the middlemen
-gem "middleman", "~> 3.0.5"
+gem "middleman", "~> 3.0.11"
 gem "middleman-blog", "~> 3.1.1"
 gem "middleman-blog-editor"
+gem 'asset_sync', :git => 'git://github.com/2a6U37Nn/asset_sync.git'
 gem "middleman-sync", "~> 3.0.9"
-gem "foreman"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0.0"
