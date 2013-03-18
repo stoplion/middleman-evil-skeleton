@@ -1,1 +1,1 @@
-build: bundle exec middleman build
+build: bundle exec middleman sync
