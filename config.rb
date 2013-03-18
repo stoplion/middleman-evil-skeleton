@@ -2,7 +2,7 @@
 # Blog settings
 ###
 
-# Time.zone = "UTC"
+Time.zone = "US/Eastern"
 
 activate :blog do |blog|
   blog.prefix = "/pages"
