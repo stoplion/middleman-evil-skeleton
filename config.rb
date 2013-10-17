@@ -3,6 +3,8 @@ require 'zurb-foundation'
 require 'slim'
 
 
+Slim::Engine.set_default_options :shortcut => {'@' => {:attr => %w(data-role role)}}
+
 # BLOG SETTINGS
 
 # Time.zone = "US/Eastern"
@@ -45,7 +47,7 @@ require 'slim'
 # end
 
 activate :directory_indexes
-
+activate :bower
 
 # COMPASS
 preferred_syntax = :sass
