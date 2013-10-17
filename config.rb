@@ -1,11 +1,14 @@
-###
-# Blog settings
-###
+require 'susy'
+require 'zurb-foundation'
+require 'slim'
 
-Time.zone = "US/Eastern"
 
-activate :blog do |blog|
-  blog.prefix = "/pages"
+# BLOG SETTINGS
+
+# Time.zone = "US/Eastern"
+
+# activate :blog do |blog|
+#   blog.prefix = "/pages"
   # blog.permalink = ":year/:month/:day/:title.html"
   # blog.sources = ":year-:month-:day-:title.html"
   # blog.taglink = "tags/:tag.html"
@@ -15,19 +18,20 @@ activate :blog do |blog|
   # blog.year_link = ":year.html"
   # blog.month_link = ":year/:month.html"
   # blog.day_link = ":year/:month/:day.html"
-  blog.default_extension = ".markdown"
-
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
-
+  # blog.default_extension = ".markdown"
+  # blog.tag_template = "tag.html"
+  # blog.calendar_template = "calendar.html"
   # blog.paginate = true
   # blog.per_page = 10
   # blog.page_link = "page/:num"
-end
+# end
 
-page "/feed.xml", :layout => false
+# page "/feed.xml", :layout => false
+# activate :blog_editor
 
-activate :blog_editor
+
+
+# DEPLOYMENT OPTIONS..
 
 # activate :sync do |sync|
 #   sync.fog_provider = ENV['FOG_DIRECTORY'] # Your storage provider
@@ -42,17 +46,9 @@ activate :blog_editor
 
 activate :directory_indexes
 
-### 
-# Compass
-###
 
-# Susy grids in Compass
-# First: gem install susy
-require 'susy'
-require 'zurb-foundation'
+# COMPASS
 preferred_syntax = :sass
-
-require 'slim'
 
 # Change Compass configuration
 # compass_config do |config|
@@ -96,13 +92,11 @@ require 'slim'
 # end
 
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 # Build-specific configuration
-configure :build do
+# configure :build do
   # For example, change the Compass output style for deployment
   # activate :minify_css
   
@@ -122,4 +116,23 @@ configure :build do
   
   # Or use a different image path
   # set :http_path, "/Content/images/"
+# end
+
+
+helpers do
+
+  def get_page_by_directory(directory)
+    sitemap.resources.select do |resource|
+      resource.url =~ /^\/#{directory}\/.*/
+    end
+  end
+
+  # def projects
+  #   get_page_by_directory('projects')
+  # end
+
+  # def pages
+  #   get_page_by_directory('pages')
+  # end
+
 end
